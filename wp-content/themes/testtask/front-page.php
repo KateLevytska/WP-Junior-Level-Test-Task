@@ -1,0 +1,9 @@
+<?php 
+get_header();?>
+
+<div class="form">
+    <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]')?>
+</div>
+
+<?php 
+get_footer();?>

@@ -44,6 +44,15 @@
 				<p class="site-description"><?php echo $testtask_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
+		<section>
+<div><?php the_field ('section1_banner-image')?></div>
+<div><?php the_field ('section1_banner-image2')?></div>
+<p><?php the_field ('section1_phone')?></p>
+<div><?php the_field ('section1_logo')?></div>
+<h1><?php the_field ('section1_title')?></h1>
+<p><?php the_field ('section1_description1')?></p>
+<p><?php the_field ('section1_description2')?></p>
+</section>  
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'testtask' ); ?></button>

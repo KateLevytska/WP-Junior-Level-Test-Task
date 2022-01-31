@@ -1,0 +1,98 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.form {
+    color: #435b61;
+    max-width: 483px;
+    
+    &_time {
+        display: flex;
+        font-size: 14px;
+        align-items: baseline;
+        justify-content: space-between;
+
+        input {
+            margin: 0;
+        }
+    }
+
+    &_input, &_submit {
+        padding: 10px 19px; 
+        width: 100%;
+    }
+
+    &_input {      
+        font-size: 16px;
+        border-radius: 0;
+        border: 1px solid #dcdcdc;
+        margin-bottom: 17px;
+
+        &::placeholder {
+            color: #435b61;
+        }
+
+        &:focus {
+            border-radius: 0;
+            border: none;
+        }
+    }
+
+    &_submit {
+        background-color: #d78346;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 20px;
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0 3px 1px 0 #a15216;
+    }
+
+    &_top {
+        background-color: #2489BB;
+        color: #fff;
+        padding: 17px;
+
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    &_body {
+        background-color: #f7f7f7;
+        padding: 17px;
+    }
+
+    &_bottom {
+        font-size: 14px;
+
+        &_text {
+            text-align: center;
+            max-width: 195px;
+            margin: 0 auto;
+        }
+    }
+
+    &_description {
+        font-size: 12px;
+    }
+
+}
+
+.wpcf7-not-valid-tip {
+    margin-top: -14px;
+}
+
+p:empty{
+    display: none;
+}
