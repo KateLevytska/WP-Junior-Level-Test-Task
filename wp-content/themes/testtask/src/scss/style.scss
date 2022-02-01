@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -7,27 +8,112 @@ body {
     box-sizing: border-box;
 }
 
+p, h1, h2, h3, a {
+    margin: 0;
+}
+
+p:empty{
+    display: none;
+}
+
+span:empty{
+    display: none;
+}
+
+.header {
+    color: #201E51;
+    position: relative;
+
+    &__phone {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &__banner {
+        position: relative;
+        width: 100%;
+        min-height: 420px;
+        height: 530px;
+
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: #fff;
+            opacity: 72%;
+        }
+
+        &-overlay {
+            position: absolute;
+            top: -1093px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 49% 43px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 295px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        display: block;
+        font-size: 35px;
+        font-weight: bold;
+        position: absolute;
+        text-align: center;
+        bottom: 150px;
+    }
+
+    &__item {
+        color: #2489BB;
+        font-size: 74px;
+        font-weight: bold;
+        position: absolute;
+        bottom: 65px;
+    }
+
+    &__description {
+        font-size: 21px;
+        font-weight: bold;
+        position: absolute;
+        bottom: 45px;
+    }
+
+
+}
+
 .form {
     color: #435b61;
-    max-width: 483px;
     
-    &_time {
+    &__time {
         display: flex;
         font-size: 14px;
         align-items: baseline;
         justify-content: space-between;
-
-        input {
-            margin: 0;
-        }
     }
 
-    &_input, &_submit {
+    &__input, &__submit {
         padding: 10px 19px; 
         width: 100%;
+        height: 59px;
     }
 
-    &_input {      
+    &__input {      
         font-size: 16px;
         border-radius: 0;
         border: 1px solid #dcdcdc;
@@ -41,9 +127,13 @@ body {
             border-radius: 0;
             border: none;
         }
+
+        &-radio {
+            border: none;
+        }
     }
 
-    &_submit {
+    &__submit {
         background-color: #d78346;
         color: #fff;
         text-transform: uppercase;
@@ -51,40 +141,47 @@ body {
         border: none;
         border-radius: 2px;
         box-shadow: 0 3px 1px 0 #a15216;
+        margin-bottom: 10px;
     }
 
-    &_top {
+    &__top {
         background-color: #2489BB;
         color: #fff;
         padding: 17px;
-
-        h3 {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 15px;
-        }
     }
 
-    &_body {
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    &__description {
+        font-size: 15px;
+    }
+
+    &__body {
         background-color: #f7f7f7;
         padding: 17px;
     }
 
-    &_bottom {
+    &__text, &__bottom{
         font-size: 14px;
-
-        &_text {
-            text-align: center;
-            max-width: 195px;
-            margin: 0 auto;
-        }
     }
 
-    &_description {
+    &__text {
+        text-align: left;
+        margin-bottom: 17px;
+    }
+
+    &__bottom {
+        text-align: center;
+        max-width: 195px;
+        margin: 0 auto;
+    }
+
+    &__notice {
         font-size: 12px;
+        margin-bottom: 27px;
     }
 
 }
@@ -93,14 +190,20 @@ body {
     margin-top: -14px;
 }
 
-p:empty{
-    display: none;
+.sectionCounter {
+    background-color: #201e51;
+    padding: 50px;
 }
 
 .sliderSection {
     background-color: #2489bb;
     color: #fff;
     text-align: center;
+    padding-top: 15px;
+
+    &__text {
+        margin-bottom: 20px;
+    }
 
     &__bottom {
         margin: 0 auto;
@@ -125,22 +228,30 @@ p:empty{
     &__title {
         font-size: 22px;
         font-weight: 700;
+        line-height: 60px;
+        padding-bottom: 15px;
+
+        &-bottom {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
     }
 }
 
 .sliderImages {
     padding-top: 10px;
+    max-width: 1002px;
+    margin: 0 auto;
 
     &__item {
-        max-width: 1002px;
         width: 100%;
-        height: 200px;
         background-size: cover;
+        height: 200px;
     }
 
     &__arrow {
         background-color: transparent;
-        background-image: url(img/arrow.png);
+        background-image: url(img/arrow.svg);
         background-size: contain;
         width: 32px;
         height: 32px;
@@ -163,21 +274,35 @@ p:empty{
 }
 
 .sliderReviews {
-    padding: 49px;
+    padding-top: 49px;
+    padding-left: 49px;
+    padding-right: 49px;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &__star {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
 
     &__raiting {
         display: flex;
         justify-content: center;
+        padding-top: 0;
+        margin-top: 0;
+        padding-bottom: 10px;
     }
 
     &__text {
         font-size: 18px;
         text-align: left;
         font-weight: 400;
+        margin-bottom: 22px;
     }
 
     &__arrow {
-        background-image: url(img/arrow-review.png);  
+        background-image: url(img/arrow-review.svg);  
         border: none;
         background-size: contain;
         width: 12px;
@@ -188,7 +313,6 @@ p:empty{
         position: absolute;
         top: 96px;
         left: -25px;
-
 
         &-next {
             transform: rotate(180deg);
