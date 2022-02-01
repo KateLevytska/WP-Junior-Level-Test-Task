@@ -138,9 +138,14 @@ add_action( 'widgets_init', 'testtask_widgets_init' );
  * Enqueue scripts and styles.
  */
 function testtask_scripts() {
-	wp_enqueue_style( 'testtask-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'testtask-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'main-font', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+	wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+	wp_enqueue_style( 'testtask-style', get_stylesheet_uri(), array(), _S_VERSION );
+
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'slick-script', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', 'jquery');
+	wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/scripts.min.js');
 	wp_enqueue_script( 'testtask-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

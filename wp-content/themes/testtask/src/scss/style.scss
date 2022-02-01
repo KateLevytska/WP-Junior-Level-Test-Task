@@ -96,3 +96,119 @@ body {
 p:empty{
     display: none;
 }
+
+.sliderSection {
+    background-color: #2489bb;
+    color: #fff;
+    text-align: center;
+
+    &__bottom {
+        margin: 0 auto;
+        width: 255px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 17px;
+    }
+
+    &__link {
+        display: block;
+        color: rgb(51, 41, 41);
+        border: 2px solid #fff;
+        padding: 17px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: #fff;
+        width: 204px;
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+.sliderImages {
+    padding-top: 10px;
+
+    &__item {
+        max-width: 1002px;
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+    }
+
+    &__arrow {
+        background-color: transparent;
+        background-image: url(img/arrow.png);
+        background-size: contain;
+        width: 32px;
+        height: 32px;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        left: 12px;
+
+        &-next {
+            transform: rotate(180deg) translateY(-50%);
+            right: 12px;
+            left: auto;
+            z-index: 3;
+            transform-origin: top;
+        }
+    }
+
+}
+
+.sliderReviews {
+    padding: 49px;
+
+    &__raiting {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__text {
+        font-size: 18px;
+        text-align: left;
+        font-weight: 400;
+    }
+
+    &__arrow {
+        background-image: url(img/arrow-review.png);  
+        border: none;
+        background-size: contain;
+        width: 12px;
+        height: 18px;
+        z-index: 2;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 96px;
+        left: -25px;
+
+
+        &-next {
+            transform: rotate(180deg);
+            left: auto;
+            right: -25px;
+        }
+    }
+}
+
+footer {
+    background-color: #201E51;
+    color: #fff;
+    height: 140px;
+    padding: 55px;
+    display: flex;
+    justify-content: flex-end ;
+
+    .facebook {
+        background-image: url("img/Facebook.png");
+        width: 30px;
+        height: 30px;
+    }
+}
