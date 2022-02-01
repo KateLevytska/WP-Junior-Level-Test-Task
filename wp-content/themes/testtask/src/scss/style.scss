@@ -193,6 +193,13 @@ span:empty{
 .sectionCounter {
     background-color: #201e51;
     padding: 50px;
+    color: #fff;
+
+    &__title {
+        font-size: 29px;
+        font-weight: 400;
+        text-align: center;
+    }
 }
 
 .sliderSection {
@@ -328,11 +335,221 @@ footer {
     height: 140px;
     padding: 55px;
     display: flex;
-    justify-content: flex-end ;
+    justify-content: flex-end;
 
     .facebook {
         background-image: url("img/Facebook.png");
         width: 30px;
         height: 30px;
+    }
+}
+
+
+@media screen and (min-width: 480px) {
+    .header {
+        &__title {
+            font-size: 60px;
+            bottom: 170px;
+        }
+    
+        &__text {
+            margin-left: 40px;
+            width: 400px;
+            margin: 0 auto;
+        }
+    
+        &__item {
+            font-size: 100px;
+            bottom: 75px;
+        }
+    
+        &__description {
+            font-size: 40px;
+            bottom: 40px;
+        } 
+    }
+
+}
+
+@media screen and (min-width: 650px) {
+
+    .sliderSection {
+
+        &__title {
+            font-size: 30px;
+        }
+    }
+    
+    .sliderImages {
+
+        &__item {
+            height: 340px;
+        }
+
+        &__arrow {
+            left: 22px;
+            width: 44px;
+            height: 44px;
+    
+            &-next {
+                right: 22px;
+                left: auto;
+            }
+        }
+    }
+
+    .sliderReviews {
+        padding-bottom: 25px;
+
+        &__star {
+            width: 44px;
+            height: 44px;
+        }
+
+        &__arrow {
+            width: 25px;
+            height: 40px;
+            top: 96px;
+            left: -35px;
+    
+            &-next {
+                transform: rotate(180deg);
+                left: auto;
+                right: -35px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .sliderImages {
+
+        &__item {
+            height: 450px;
+        }
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .form {
+        position: absolute;
+        z-index: 4;
+        top: 150px;
+        right: 40px;
+        max-width: 320px;
+
+        &__title{
+            text-shadow: 2px 2px 2px #000;
+        }
+    }
+
+    .sliderSection {
+        padding-top: 190px;
+
+        &__text {
+            margin-bottom: 38px;
+        }
+
+        &__bottom {
+            padding-bottom: 87px;
+        }
+    }
+    .sectionCounter {
+        height: 212px;
+    }
+
+    .header {
+        &__title {
+            font-size: 75px;
+            bottom: 220px;
+        }
+    
+        &__text {
+            margin-left: 40px;
+            width: 600px;
+        }
+    
+        &__item {
+            font-size: 144px;
+            bottom: 75px;
+        }
+    
+        &__description {
+            font-size: 44px;
+            bottom: 26px;
+        } 
+    }
+
+    .sliderImages {
+
+        &__item {
+            height: 581px;
+        }
+
+        &__arrow {
+            left: 33px;
+            width: 66px;
+            height: 66px;
+    
+            &-next {
+                right: 33px;
+                left: auto;
+            }
+        }
+    }
+
+    .sliderReviews {
+
+        &__arrow {
+            width: 25px;
+            height: 40px;
+            top: 96px;
+            left: -45px;
+    
+            &-next {
+                transform: rotate(180deg);
+                left: auto;
+                right: -45px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1280px) {
+    .form {
+        max-width: 467px;
+        margin-right: 85px;
+    }
+
+    .sliderImages {
+
+        &__arrow {
+            left: -37px;
+            width: 74px;
+            height: 74px;
+    
+            &-next {
+                right: -37px;
+                left: auto;
+            }
+        }
+    }
+
+    .sliderReviews {
+        padding-bottom: 98px;
+
+        &__arrow {
+            width: 25px;
+            height: 40px;
+            top: 96px;
+            left: -57px;
+    
+            &-next {
+                transform: rotate(180deg);
+                left: auto;
+                right: -57px;
+            }
+        }
     }
 }

@@ -1,6 +1,10 @@
 <?php
 get_header(); ?>
 
+<section class="sectionCounter">
+    <h2 class="sectionCounter__title">Next drawing:</h2>
+</section>
+
 <aside class="form">
         <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]') ?>
 </aside>
