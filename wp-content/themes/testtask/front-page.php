@@ -6,7 +6,7 @@ get_header(); ?>
 </section>
 
 <aside class="form">
-        <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]') ?>
+    <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]') ?>
 </aside>
 
 <section class="sliderSection">
@@ -24,27 +24,37 @@ get_header(); ?>
 
     <div class="sliderReviews">
         <h2 class="sliderSection__title sliderSection__title-bottom"><?php the_field('section2_title2') ?></h2>
-        <?php if (have_rows('reviews_slider')) : ?>
-            <div id="sliderReviews">
-                <?php while (have_rows('reviews_slider')) : the_row(); ?>
-                    <div>
-                        <div class="sliderReviews__raiting">
-                            <?php
-                            $i = 1;
-                            $raiting_count = get_sub_field('raiting');
-                            while ($i <= $raiting_count) {
-                                echo "<img src='" . get_template_directory_uri() . "/img/star.svg' class='sliderReviews__star'>";
-                                $i++;
-                            }
-                            ?>
-                        </div>
 
-                        <p class="sliderReviews__text">"<?php the_sub_field('review'); ?>"</p>
-                        <p class="sliderReviews__text">– <?php the_sub_field('author'); ?></p>
+        <div id="sliderReviews">
+            <?php
+            global $post;
+            $myposts = get_posts(array(
+                'post_type' => 'testimonials'
+            ));
+            foreach ($myposts as $post) {
+                setup_postdata($post);
+            ?>
+                <div>
+                    <div class="sliderReviews__raiting">
+                        <?php
+                        $i = 1;
+                        $raiting_count = get_field('raiting');
+                        while ($i <= $raiting_count) {
+                            echo "<img src='" . get_template_directory_uri() . "/img/star.svg' class='sliderReviews__star'>";
+                            $i++;
+                        }
+                        ?>
                     </div>
-                <?php endwhile; ?>
-            </div>
-        <?php endif; ?>
+                    <div class="sliderReviews__content">
+                        <p class="sliderReviews__text"><?php echo get_the_content(); ?></p>
+                        <p class="sliderReviews__text">- <?php the_title(); ?></p>
+                    </div>
+                </div>
+            <?php
+            }
+            wp_reset_postdata();
+            ?>
+        </div>
     </div>
     <div class="sliderSection__bottom">
         <p class="sliderSection__text"><?php the_field('section2_description') ?></p>
