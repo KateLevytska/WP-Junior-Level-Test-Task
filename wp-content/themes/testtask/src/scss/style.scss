@@ -47,6 +47,19 @@ main {
         font-weight: bold;
     }
 
+    &__logo {
+        width: 278px;
+        height: 84px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 200px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
     &__banner {
         position: relative;
         width: 100%;
@@ -352,36 +365,46 @@ main {
     }
 }
 
-footer {
+.footer {
     background-color: $primary_bg_color;
     color: $primary_color_text_second;
     height: 140px;
-    padding: 55px;
+    padding: 55px 35px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: baseline;
+
+    &__logo {
+        width: 132px;
+        height: 40px;
+        transform: translateY(-20%);
+    }
 
     .facebook {
-        background-image: url("img/Facebook.png");
+
+        &__item {
         width: 30px;
         height: 30px;
+        transform: translateY(-40%);
+        }
     }
 }
 
 ////404////
 
 .errorSection {
-    font-size: 150px;
+    font-size: 70px;
     color: $primary_color_text;
     display: flex;
     justify-content: center;
 
     &__block {
-        padding: 100px;
+        padding: 30px;
         text-align: center;
     }
 
     &__item {
-        font-size: 60px;
+        font-size: 30px;
     }
 }
 
@@ -512,23 +535,13 @@ footer {
             font-size: 40px;
             bottom: 40px;
         }
-    }
 
-    
-    ////404////
-
-    .errorSection {
-        font-size: 60px;
-
-        &__block {
-            padding: 30px;
-        }
-
-        &__item {
-            font-size: 30px;
+        &__logo {
+            width: 330px;
+            height: 104px;
+            bottom: 240px;
         }
     }
-
 }
 
 @media screen and (min-width: 650px) {
@@ -577,20 +590,6 @@ footer {
                 left: auto;
                 right: -35px;
             }
-        }
-    }
-
-    ////404////
-
-    .errorSection {
-        font-size: 60px;
-
-        &__block {
-            padding: 30px;
-        }
-
-        &__item {
-            font-size: 30px;
         }
     }
 }
@@ -655,6 +654,14 @@ footer {
             font-size: 44px;
             bottom: 26px;
         }
+
+        &__logo {
+            width: 413px;
+            height: 126px;
+            bottom: 290px;
+            left: 60px;
+            right: auto;
+        }
     }
 
     .sliderImages {
@@ -705,11 +712,35 @@ footer {
         }
     }
 
+    .footer {
+
+        align-items: center;
+
+        .facebook {
+            transform: translateY(10%);
+        }
+
+        &__logo {
+            width: 284px;
+            height: 74px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
 }
 
 
 
 @media screen and (min-width: 1280px) {
+
+    .header {
+        
+        &__logo {
+            left: 110px;
+        }
+    }
+
     .form {
         max-width: 467px;
         margin-right: 85px;

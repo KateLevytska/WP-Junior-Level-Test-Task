@@ -30,23 +30,12 @@
 			<?php if (!is_front_page()) { ?>
 				<a href="<?php echo home_url();?>" class="header__404">Home</a>
 			<?php } else { ?>
-				<div class="branding">
-					<?php
-					the_custom_logo();
-					if (is_front_page() && is_home()) :
-					?>
-
-					<?php
-					endif;
-					$testtask_description = get_bloginfo('description', 'display');
-					if ($testtask_description || is_customize_preview()) :
-					?>
-					<?php endif; ?>
-				</div><!-- .branding -->
 				<div style="background-image: url('<?php the_field('section1_banner-image') ?>')" class="header__banner"></div>
 				<div style="background-image: url('<?php the_field('section1_banner-image2') ?>')" class="header__banner-overlay"></div>
 				<p class="header__phone"><?php the_field('section1_phone') ?></p>
 				<div class="header__text">
+					<div style="background-image: url('<?php the_field('header_logo', 'option')?>')" class="header__logo"> 
+					</div>
 					<h1 class="header__title"><?php the_field('section1_title') ?></h1>
 					<p class="header__item"><?php the_field('section1_description1') ?></p>
 					<p class="header__description"><?php the_field('section1_description2') ?></p>
