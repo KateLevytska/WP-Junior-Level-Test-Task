@@ -132,7 +132,6 @@ function testtask_scripts()
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('slick-script', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', 'jquery');
 	wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/scripts.min.js');
-	wp_enqueue_script('testtask-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');

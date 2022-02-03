@@ -97,7 +97,7 @@ main {
             left: 0;
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: 49% 43px;
+            background-position: 50% -11px;
         }
     }
 
@@ -151,6 +151,7 @@ main {
         padding: 10px 19px;
         width: 100%;
         height: 59px;
+        -webkit-appearance: none;
     }
 
     &__input {
@@ -179,9 +180,10 @@ main {
         text-transform: uppercase;
         font-size: 20px;
         border: none;
-        border-radius: 2px;
+        border-radius: 4px;
         box-shadow: 0 3px 1px 0 #a15216;
         margin-bottom: 10px;
+        -webkit-appearance: none;
     }
 
     &__top {
@@ -233,9 +235,11 @@ main {
 
 .counterSection {
     background-color: $primary_bg_color;
-    padding-top: 50px;
-    padding-bottom: 50px;
     color: $primary_color_text_second;
+    display: flex; 
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
 }
 
 .counter {
@@ -244,6 +248,7 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
+    align-items: center;
 
     &__title {
         font-size: 29px;
@@ -326,7 +331,6 @@ main {
 }
 
 .sliderImages {
-    padding-top: 10px;
     max-width: 1000px;
     margin: 0 auto;
 
@@ -657,12 +661,30 @@ main {
     .form {
         position: absolute;
         z-index: 4;
-        top: 94px;
+        top: 114px;
         right: 14px;
         max-width: 380px;
 
+        &__top {
+            padding: 20px;
+        }
+
         &__title {
             text-shadow: 2px 2px 2px #000;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        &__description {
+            font-size: 18px;
+        }
+
+        &__input {
+            padding: 20px;
+        }
+
+        &__notice {
+            font-size: 14px;
         }
     }
 
@@ -680,6 +702,8 @@ main {
 
     .counterSection {
         height: 212px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .counter {
@@ -741,6 +765,7 @@ main {
 
         &__phone {
             right: 70px;
+            font-size: 42px;
         }
     }
 
