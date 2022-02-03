@@ -1,12 +1,4 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package TestTask
- */
-
 get_header();
 ?>
 
@@ -24,16 +16,14 @@ get_header();
 					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'testtask' ) . '</span> <span class="nav-title">%title</span>',
 				)
 			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;
 
-		endwhile; // End of the loop.
+		endwhile;
 		?>
 
-	</main><!-- #main -->
+	</main>
 
 <?php
 get_footer();

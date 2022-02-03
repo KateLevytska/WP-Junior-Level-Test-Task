@@ -1,3 +1,14 @@
+
+/**
+ * Theme Name:  TestTask
+ * Author:      Kate Yevtikhii
+ * License:     GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: underscore
+ * Version:    1.0
+ */
+
+
 $primary_color_text: #201e51;
 $primary_color_text_second: #ffffff;
 $primary_bg_color: #201e51;
@@ -220,15 +231,54 @@ main {
     margin-top: -14px;
 }
 
-.sectionCounter {
+.counterSection {
     background-color: $primary_bg_color;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     color: $primary_color_text_second;
+}
+
+.counter {
+    width: 280px;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
 
     &__title {
         font-size: 29px;
         font-weight: 400;
         text-align: center;
+    }
+
+    &__block {
+        margin-left: 14px;
+        margin-right: 14px;
+        position: relative;
+
+        &:not(:last-child):before {
+            content: ":";
+            display: block;
+            position: absolute;
+            right: -20px;
+            font-size: 37px;
+            top: -2px;
+        }
+    }
+
+    &__items {
+        text-align: center;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    &__text {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    &__item {
+        font-size: 37px;
+        font-weight: 400;
     }
 }
 
@@ -277,7 +327,7 @@ main {
 
 .sliderImages {
     padding-top: 10px;
-    max-width: 1002px;
+    max-width: 1000px;
     margin: 0 auto;
 
     &__item {
@@ -369,15 +419,16 @@ main {
     background-color: $primary_bg_color;
     color: $primary_color_text_second;
     height: 140px;
-    padding: 55px 35px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    padding-left: 35px;
+    padding-right: 35px;
+    align-items: center;
+
 
     &__logo {
         width: 132px;
         height: 40px;
-        transform: translateY(-20%);
     }
 
     .facebook {
@@ -385,7 +436,6 @@ main {
         &__item {
         width: 30px;
         height: 30px;
-        transform: translateY(-40%);
         }
     }
 }
@@ -476,8 +526,6 @@ main {
     &__content {
         width: 500px;
     }
-
-
 }
 
 .post-navigation {
@@ -609,9 +657,9 @@ main {
     .form {
         position: absolute;
         z-index: 4;
-        top: 150px;
-        right: 40px;
-        max-width: 320px;
+        top: 94px;
+        right: 14px;
+        max-width: 380px;
 
         &__title {
             text-shadow: 2px 2px 2px #000;
@@ -630,8 +678,36 @@ main {
         }
     }
 
-    .sectionCounter {
+    .counterSection {
         height: 212px;
+    }
+
+    .counter {
+        justify-content: center;
+        margin-left: 156px;
+
+        &__title {
+            text-align: center;
+        }
+
+        &__items {
+            justify-content: flex-start;
+        }
+
+        &__item {
+            font-size: 59px;
+        }
+
+        &__text {
+            font-size: 19px;
+        }
+
+        &__block {
+
+            &:not(:last-child):before {
+                top: 10px;
+            }
+        }
     }
 
     .header {
@@ -661,6 +737,10 @@ main {
             bottom: 290px;
             left: 60px;
             right: auto;
+        }
+
+        &__phone {
+            right: 70px;
         }
     }
 
@@ -727,7 +807,6 @@ main {
             background-size: contain;
         }
     }
-
 }
 
 
@@ -742,8 +821,8 @@ main {
     }
 
     .form {
-        max-width: 467px;
-        margin-right: 85px;
+        max-width: 483px;
+        right: 70px;
     }
 
     .sliderImages {

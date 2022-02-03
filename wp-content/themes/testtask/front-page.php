@@ -1,8 +1,29 @@
 <?php
 get_header(); ?>
 
-<section class="sectionCounter">
-    <h2 class="sectionCounter__title">Next drawing:</h2>
+<section class="counterSection">
+    <div class="counter">     
+            <h2 class="counter__title"><?php the_field('countersection_title') ?></h2>      
+        <div class="counter__items">
+            <div class="counter__block">
+                <p class="counter__item counter__days"></p>
+                <span class="counter__text"> <?php the_field('countersection_days') ?></span>
+            </div>
+            <div class="counter__block">
+                <p class="counter__item counter__hours"></p>
+                <span class="counter__text"><?php the_field('countersection_hours') ?></span>
+            </div>
+            <div class="counter__block">
+                <p class="counter__item counter__minutes"></p>
+                <span class="counter__text"><?php the_field('countersection_minutes') ?></span>
+            </div>
+            <div class="counter__block">
+                <p class="counter__item counter__seconds"></p>
+                <span class="counter__text"><?php the_field('countersection_seconds') ?></span>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 <aside class="form">
@@ -11,7 +32,7 @@ get_header(); ?>
 
 <section class="sliderSection">
     <div class="sliderImages">
-        <h2 class="sliderSection__title"><?php the_field('section2_title') ?></h2>
+        <h2 class="sliderSection__title"><?php the_field('sliderSection_title') ?></h2>
         <?php if (have_rows('image_slider')) : ?>
             <div id="sliderImages">
                 <?php while (have_rows('image_slider')) : the_row(); ?>
@@ -23,7 +44,7 @@ get_header(); ?>
     </div>
 
     <div class="sliderReviews">
-        <h2 class="sliderSection__title sliderSection__title-bottom"><?php the_field('section2_title2') ?></h2>
+        <h2 class="sliderSection__title sliderSection__title-bottom"><?php the_field('sliderSection_title2') ?></h2>
 
         <div id="sliderReviews">
             <?php
@@ -57,10 +78,48 @@ get_header(); ?>
         </div>
     </div>
     <div class="sliderSection__bottom">
-        <p class="sliderSection__text"><?php the_field('section2_description') ?></p>
-        <a href="#" class="sliderSection__link"><?php the_field('section2_button') ?></a>
+        <p class="sliderSection__text"><?php the_field('sliderSection_description') ?></p>
+        <a href="#" class="sliderSection__link"><?php the_field('sliderSection_button') ?></a>
     </div>
 </section>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const todayPHP = "<?php the_field('countersection_date') ?>";
+        let deadline = new Date(todayPHP);
+
+        let counterId = null;
+
+        function declensionNum(num, words) {
+            return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+        }
+
+        function countdowncounter() {
+            const diff = deadline - new Date();
+            if (diff <= 0) {
+                clearInterval(counterId);
+            }
+            const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+            const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+            const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+            const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+            $days.textContent = days < 10 ? '0' + days : days;
+            $hours.textContent = hours < 10 ? '0' + hours : hours;
+            $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+            $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+
+            if (parseInt((days + hours + minutes + seconds)) === 0) {
+                console.log(1)
+                document.querySelector('.counter').innerHTML = "Expired"
+            }
+        }
+        const $days = document.querySelector('.counter__days');
+        const $hours = document.querySelector('.counter__hours');
+        const $minutes = document.querySelector('.counter__minutes');
+        const $seconds = document.querySelector('.counter__seconds');
+        countdowncounter();
+        counterId = setInterval(countdowncounter, 1000);
+    });
+</script>
 <?php
 get_footer(); ?>

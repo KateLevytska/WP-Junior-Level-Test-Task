@@ -1,13 +1,3 @@
-<?php
-/**
- * Template part for displaying a message that posts cannot be found
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package TestTask
- */
-
-?>
 
 <section class="sectionNotFound">
 	
@@ -47,5 +37,5 @@
 
 		endif;
 		?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+	</div>
+</section>
