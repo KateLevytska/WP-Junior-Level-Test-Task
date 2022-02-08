@@ -50,6 +50,7 @@ main {
     color: $primary_color_text;
     position: relative;
 
+
     &__phone {
         position: absolute;
         top: 20px;
@@ -74,7 +75,6 @@ main {
     &__banner {
         position: relative;
         width: 100%;
-        min-height: 420px;
         height: 424px;
 
         &:before {
@@ -192,8 +192,7 @@ main {
         padding-top: 19px;
         padding-left: 17px;
         padding-right: 17px;
-        padding-bottom: 17px;
-        margin-bottom: 2px;
+        padding-bottom: 19px;
     }
 
     &__title {
@@ -223,7 +222,7 @@ main {
 
     &__bottom {
         text-align: center;
-        max-width: 195px;
+        width: 195px;
         margin: 0 auto;
     }
 
@@ -674,46 +673,105 @@ main {
 }
 
 @media screen and (min-width: 991px) {
+
+    .header {
+
+        &__banner {
+            height: 574px; 
+        }
+
+        &__title {
+            font-size: 75px;
+            bottom: 240px;
+            left: 103px;
+        }
+
+        &__text {
+            margin-left: 40px;
+            width: 600px;
+        }
+
+        &__item {
+            font-size: 144px;
+            bottom: 85px;
+            left: 98px;
+        }
+
+        &__description {
+            font-size: 44px;
+            bottom: 30px;
+            left: 103px;
+        }
+
+        &__logo {
+            width: 413px;
+            height: 126px;
+            bottom: 321px;
+            left: 60px;
+            right: auto;
+        }
+
+        &__phone {
+            top: 36px;
+            right: 76px;
+            font-size: 42px;
+        }
+    }
+
+
     .form {
         position: absolute;
         z-index: 4;
-        top: 114px;
+        top: 106px;
         right: 14px;
         max-width: 380px;
 
         &__top {
-            padding: 20px;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 25px;
+            border-radius: 4px 4px 0  0;
+        }
+
+        &__body{
+            padding: 22px;
+            border-radius: 0  0 4px 4px;
         }
 
         &__title {
-            text-shadow: 2px 2px 2px #000;
             font-size: 30px;
-            margin-bottom: 8px;
+            margin-bottom: 3px;
+            margin-left: 5px;
         }
 
         &__description {
             font-size: 18px;
+            margin-left: 5px;
         }
 
         &__input {
             padding: 20px;
+            margin-bottom: 18px;
+        }
+
+        &__submit {
+            margin-top: 0;
+            margin-bottom: 23px;
         }
 
         &__notice {
             font-size: 14px;
         }
-    }
-
-    .sliderSection {
-        padding-top: 190px;
-
-        &__text {
-            margin-bottom: 38px;
-        }
 
         &__bottom {
-            padding-bottom: 87px;
+            width: 294px;
         }
+
+        &__time {
+            margin-left: 12px;
+        }
+
     }
 
     .counterSection {
@@ -724,10 +782,11 @@ main {
 
     .counter {
         justify-content: center;
-        margin-left: 156px;
+        margin-left: 233px;
 
         &__title {
             text-align: center;
+            margin-top: -8px;
         }
 
         &__items {
@@ -743,53 +802,43 @@ main {
         }
 
         &__block {
+            margin-left: 20px;
+            margin-right: 20px;
 
             &:not(:last-child):before {
                 top: 10px;
             }
         }
     }
-
-    .header {
-        &__title {
-            font-size: 75px;
-            bottom: 220px;
-        }
+    
+    .sliderSection {
+        padding-top: 174px;
 
         &__text {
-            margin-left: 40px;
-            width: 600px;
+            margin-bottom: 38px;
+            font-size: 18px;
         }
 
-        &__item {
-            font-size: 144px;
-            bottom: 75px;
+        &__link {
+            font-size: 15px;
+            padding: 20px;
         }
 
-        &__description {
-            font-size: 44px;
-            bottom: 26px;
+        &__bottom {
+            padding-bottom: 87px;
+            width: 460px;;
         }
 
-        &__logo {
-            width: 413px;
-            height: 126px;
-            bottom: 290px;
-            left: 60px;
-            right: auto;
-        }
+        &__title {
 
-        &__phone {
-            right: 70px;
-            font-size: 42px;
-        }
-
-        &__banner {
-            height: 530px;
+            &-bottom {
+                margin-bottom: 22px;
+            } 
         }
     }
 
     .sliderImages {
+        padding-bottom: 89px;
 
         &__item {
             height: 581px;
@@ -808,6 +857,16 @@ main {
     }
 
     .sliderReviews {
+        padding-bottom: 89px;
+
+        &__star {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        &__raiting {
+            padding-bottom: 21px;
+        }
 
         &__arrow {
             width: 25px;
@@ -838,16 +897,17 @@ main {
     }
 
     .footer {
-
+        padding-left: 37px;
+        padding-right: 63px;
         align-items: center;
 
         .facebook {
-            transform: translateY(10%);
+            transform: translateY(-10%);
         }
 
         &__logo {
-            width: 284px;
-            height: 74px;
+            width: 274px;
+            height: 84px;
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -861,13 +921,13 @@ main {
     .header {
         
         &__logo {
-            left: 110px;
+            left: 157px;
         }
     }
 
     .form {
         max-width: 483px;
-        right: 70px;
+        right: 77px;
     }
 
     .sliderImages {
@@ -885,7 +945,6 @@ main {
     }
 
     .sliderReviews {
-        padding-bottom: 98px;
 
         &__arrow {
             width: 25px;
