@@ -64,7 +64,7 @@ main {
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
-        bottom: 200px;
+        bottom: 188px;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -75,7 +75,7 @@ main {
         position: relative;
         width: 100%;
         min-height: 420px;
-        height: 530px;
+        height: 424px;
 
         &:before {
             content: "";
@@ -115,7 +115,7 @@ main {
         font-weight: bold;
         position: absolute;
         text-align: center;
-        bottom: 150px;
+        bottom: 133px;
     }
 
     &__item {
@@ -123,14 +123,14 @@ main {
         font-size: 74px;
         font-weight: bold;
         position: absolute;
-        bottom: 65px;
+        bottom: 52px;
     }
 
     &__description {
         font-size: 21px;
         font-weight: bold;
         position: absolute;
-        bottom: 45px;
+        bottom: 23px;
     }
 
 
@@ -151,14 +151,14 @@ main {
         padding: 10px 19px;
         width: 100%;
         height: 59px;
+        border-radius: 4px;
         -webkit-appearance: none;
     }
 
     &__input {
         font-size: 16px;
-        border-radius: 0;
         border: 1px solid #dcdcdc;
-        margin-bottom: 17px;
+        margin-bottom: 19px;
 
         &::placeholder {
             color: #435b61;
@@ -180,21 +180,26 @@ main {
         text-transform: uppercase;
         font-size: 20px;
         border: none;
-        border-radius: 4px;
-        box-shadow: 0 3px 1px 0 #a15216;
-        margin-bottom: 10px;
+        box-shadow: 0 6px 0 0 #a15216;
+        margin-bottom: 16px;
+        margin-top: -5px;
         -webkit-appearance: none;
     }
 
     &__top {
         background-color: $primary_bg_color_second;
         color: $primary_color_text_second;
-        padding: 17px;
+        padding-top: 19px;
+        padding-left: 17px;
+        padding-right: 17px;
+        padding-bottom: 17px;
+        margin-bottom: 2px;
     }
 
     &__title {
         font-size: 20px;
         font-weight: bold;
+        margin-bottom: 2px;
     }
 
     &__description {
@@ -227,6 +232,10 @@ main {
         margin-bottom: 27px;
     }
 
+    &__time {
+        margin-top: 8px;
+    }
+
 }
 
 .wpcf7-not-valid-tip {
@@ -238,8 +247,8 @@ main {
     color: $primary_color_text_second;
     display: flex; 
     align-items: center;
-    padding-top: 55px;
-    padding-bottom: 55px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .counter {
@@ -249,11 +258,13 @@ main {
     flex-wrap: wrap;
     margin: 0 auto;
     align-items: center;
+ 
 
     &__title {
         font-size: 29px;
         font-weight: 400;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     &__block {
@@ -284,6 +295,7 @@ main {
     &__item {
         font-size: 37px;
         font-weight: 400;
+        margin-bottom: 12px;
     }
 }
 
@@ -295,6 +307,7 @@ main {
 
     &__text {
         margin-bottom: 20px;
+        margin-top: 5px;
     }
 
     &__bottom {
@@ -310,22 +323,23 @@ main {
         display: block;
         color: rgb(51, 41, 41);
         border: 2px solid #fff;
-        padding: 17px;
+        padding: 12px 19px;
         text-decoration: none;
         border-radius: 5px;
         color: $primary_color_text_second;
-        width: 204px;
+        width: 206px;
     }
 
     &__title {
         font-size: 22px;
         font-weight: 700;
         line-height: 60px;
-        padding-bottom: 15px;
+        padding-bottom: 12px;
 
         &-bottom {
             padding-bottom: 0;
             padding-top: 0;
+            line-height: 40px;
         }
     }
 }
@@ -365,7 +379,7 @@ main {
 }
 
 .sliderReviews {
-    padding-top: 49px;
+    padding-top: 35px;
     padding-left: 49px;
     padding-right: 49px;
     position: relative;
@@ -395,7 +409,8 @@ main {
         font-size: 18px;
         text-align: left;
         font-weight: 400;
-        margin-bottom: 22px !important;
+        margin-bottom: 30px;
+        line-height: 19px;
     }
 
     &__arrow {
@@ -408,13 +423,13 @@ main {
         background-color: transparent;
         background-repeat: no-repeat;
         position: absolute;
-        top: 96px;
-        left: -25px;
+        top: 60px;
+        left: -33px;
 
         &-next {
             transform: rotate(180deg);
             left: auto;
-            right: -25px;
+            right: -33px;
         }
     }
 }
@@ -425,14 +440,15 @@ main {
     height: 140px;
     display: flex;
     justify-content: space-between;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 26px;
+    padding-right: 24px;
     align-items: center;
 
 
     &__logo {
         width: 132px;
         height: 40px;
+        margin-top: -11px;
     }
 
     .facebook {
@@ -766,6 +782,10 @@ main {
         &__phone {
             right: 70px;
             font-size: 42px;
+        }
+
+        &__banner {
+            height: 530px;
         }
     }
 
