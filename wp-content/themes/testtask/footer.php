@@ -5,8 +5,8 @@
 		<?php if (have_rows('social_links', 'option')) : ?>
 			<div class="facebook">
 				<?php while (have_rows('social_links', 'option')) : the_row(); ?>
-					<div style="background-image: url('<?php the_sub_field("icon", "option") ?>')" class="facebook__item">
-						<a href="<?php the_sub_field("link", "option") ?>" class="facebook__link"></a>
+					<div class="facebook__item">
+						<a href="<?php the_sub_field("link", "option") ?>" class="facebook__link"><img src="<?php the_sub_field("icon", "option") ?>" alt="<?php the_sub_field("brand_name", "option") ?>"></a>
 					</div>
 				<?php endwhile; ?>
 			</div>
