@@ -184,6 +184,12 @@ main {
         margin-bottom: 16px;
         margin-top: -5px;
         -webkit-appearance: none;
+        transition: .1s;
+
+        &:hover {
+            box-shadow: 0 2px 0 0 #a15216;
+            transform: translateY(3px);
+        }
     }
 
     &__top {
@@ -327,6 +333,12 @@ main {
         border-radius: 5px;
         color: $primary_color_text_second;
         width: 206px;
+
+        &:hover {
+            background-color: #fff;
+            color: $primary_bg_color_second;
+            border: 2px solid $primary_bg_color_second;
+        }
     }
 
     &__title {
@@ -372,6 +384,10 @@ main {
             left: auto;
             z-index: 3;
             transform-origin: top;
+        }
+
+        &:hover {
+            opacity: 0.6;
         }
     }
 
@@ -430,6 +446,10 @@ main {
             left: auto;
             right: -33px;
         }
+
+        &:hover {
+            opacity: 0.6;
+        }
     }
 }
 
@@ -455,6 +475,10 @@ main {
         &__item {
         width: 30px;
         height: 30px;
+
+        &:hover {
+            opacity: 0.6;
+            }
         }
     }
 }
