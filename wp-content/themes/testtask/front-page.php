@@ -61,7 +61,7 @@ get_header(); ?>
                         $i = 1;
                         $raiting_count = get_field('raiting');
                         while ($i <= $raiting_count) {
-                            echo "<img src='" . get_template_directory_uri() . "/img/star.svg' class='sliderReviews__star'>";
+                            echo "<img src='" . get_template_directory_uri() . "/img/star.svg' class='sliderReviews__star' alt='raiting'>";
                             $i++;
                         }
                         ?>
