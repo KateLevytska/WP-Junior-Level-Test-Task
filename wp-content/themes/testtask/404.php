@@ -6,7 +6,7 @@ get_header();
 		<section class="errorSection">
 			<div class="errorSection__block">
 				<h1>404</h1>
-				<p class="errorSection__item">Page not found</p>
+				<p class="errorSection__item"><?php _e('Page not found'); ?></p>
 			</div>			
 		</section>
 	</main>
