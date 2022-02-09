@@ -1,0 +1,319 @@
+.sliderSection {
+    background-color: $primary_bg_color_second;
+    color: $primary_color_text_second;
+    text-align: center;
+    padding-top: 15px;
+
+    &__text {
+        margin-bottom: 20px;
+        margin-top: 5px;
+    }
+
+    &__bottom {
+        margin: 0 auto;
+        width: 255px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 17px;
+    }
+
+    &__link {
+        display: block;
+        color: rgb(51, 41, 41);
+        border: 2px solid #fff;
+        padding: 12px 19px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: $primary_color_text_second;
+        width: 206px;
+
+        &:hover {
+            background-color: #fff;
+            color: $primary_bg_color_second;
+            border: 2px solid $primary_bg_color_second;
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 60px;
+        padding-bottom: 12px;
+
+        &-bottom {
+            padding-bottom: 0;
+            padding-top: 0;
+            line-height: 40px;
+        }
+    }
+}
+
+.sliderImages {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &__item {
+        width: 100%;
+        background-size: cover;
+        height: 200px;
+    }
+
+    &__arrow {
+        background-color: transparent;
+        background-image: url(img/arrow.svg);
+        background-size: contain;
+        width: 32px;
+        height: 32px;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        left: 12px;
+        cursor: pointer;
+
+        &-next {
+            transform: rotate(180deg) translateY(-50%);
+            right: 12px;
+            left: auto;
+            z-index: 3;
+            transform-origin: top;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.sliderReviews {
+    padding-top: 35px;
+    padding-left: 49px;
+    padding-right: 49px;
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+
+    &__star {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    &__raiting {
+        display: flex;
+        justify-content: center;
+        padding-top: 0;
+        margin-top: 0;
+        padding-bottom: 10px;
+    }
+
+    &__content {
+        max-width: 567px;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    &__text {
+        font-size: 18px;
+        text-align: left;
+        font-weight: 400;
+        margin-bottom: 30px;
+        line-height: 19px;
+    }
+
+    &__arrow {
+        background-image: url(img/arrow-review.svg);
+        border: none;
+        background-size: contain;
+        width: 12px;
+        height: 18px;
+        z-index: 2;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 60px;
+        left: -33px;
+        cursor: pointer;
+
+        &-next {
+            transform: rotate(180deg);
+            left: auto;
+            right: -33px;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+///media-querys///
+
+@media screen and (min-width: 650px) {
+
+    .sliderSection {
+
+        &__title {
+            font-size: 30px;
+        }
+    }
+
+    .sliderImages {
+
+        &__item {
+            height: 340px;
+        }
+
+        &__arrow {
+            left: 22px;
+            width: 44px;
+            height: 44px;
+
+            &-next {
+                right: 22px;
+                left: auto;
+            }
+        }
+    }
+
+    .sliderReviews {
+        padding-bottom: 25px;
+
+        &__star {
+            width: 44px;
+            height: 44px;
+        }
+
+        &__arrow {
+            width: 25px;
+            height: 40px;
+            top: 96px;
+            left: -35px;
+
+            &-next {
+                transform: rotate(180deg);
+                left: auto;
+                right: -35px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .sliderImages {
+
+        &__item {
+            height: 450px;
+        }
+    }
+}
+
+@media screen and (min-width: 991px) {
+
+    .sliderSection {
+        padding-top: 174px;
+
+        &__text {
+            margin-bottom: 38px;
+            font-size: 18px;
+        }
+
+        &__link {
+            font-size: 15px;
+            padding: 20px;
+        }
+
+        &__bottom {
+            padding-bottom: 87px;
+            width: 460px;
+            ;
+        }
+
+        &__title {
+
+            &-bottom {
+                margin-bottom: 22px;
+            }
+        }
+    }
+
+    .sliderImages {
+        padding-bottom: 89px;
+
+        &__item {
+            height: 581px;
+        }
+
+        &__arrow {
+            left: 33px;
+            width: 66px;
+            height: 66px;
+
+            &-next {
+                right: 33px;
+                left: auto;
+            }
+        }
+    }
+
+    .sliderReviews {
+        padding-bottom: 89px;
+
+        &__star {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        &__raiting {
+            padding-bottom: 21px;
+        }
+
+        &__arrow {
+            width: 25px;
+            height: 40px;
+            top: 96px;
+            left: -45px;
+
+            &-next {
+                transform: rotate(180deg);
+                left: auto;
+                right: -45px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    .sliderImages {
+
+        &__arrow {
+            left: -37px;
+            width: 74px;
+            height: 74px;
+
+            &-next {
+                right: -37px;
+                left: auto;
+            }
+        }
+    }
+
+    .sliderReviews {
+
+        &__arrow {
+            width: 25px;
+            height: 40px;
+            top: 96px;
+            left: -57px;
+
+            &-next {
+                transform: rotate(180deg);
+                left: auto;
+                right: -57px;
+            }
+        }
+    }
+}

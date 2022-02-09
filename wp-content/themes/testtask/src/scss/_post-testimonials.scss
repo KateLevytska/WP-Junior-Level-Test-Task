@@ -1,0 +1,46 @@
+
+/////post-testimonials/////
+
+.post {
+
+    &__title {
+        color: $primary_color_text;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__content {
+        width: 500px;
+    }
+
+    &__links {
+        color: $primary_color_text;
+        text-decoration: none;
+        display: block;
+        margin-top: 20px;
+
+        &:hover {
+            color: #d78346;
+        }
+    }
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: block;
+    margin-left: 0 auto;
+
+    a {
+        text-decoration: none;
+        color: $primary_color_text;
+
+        &:hover {
+            color: #d78346;
+        }
+    }
+}
