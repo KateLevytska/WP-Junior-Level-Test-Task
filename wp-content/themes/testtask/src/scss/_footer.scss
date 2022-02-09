@@ -15,11 +15,25 @@
         margin-top: -11px;
     }
 
-    .facebook {
-        &__item {
-            width: 30px;
+    .socialLinks {
+        display: flex;
+        align-items: baseline;
+
+        &__icon {
+            border-radius: 100%;
             height: 30px;
+            width: 30px;
+            object-fit: cover;
+        }
+
+        &__link {
+            display: block;
+        }
+
+        &__item {
             cursor: pointer;
+            margin-left: 5px;
+            margin-right: 5px;
 
             &:hover {
                 opacity: 0.6;
@@ -37,7 +51,7 @@
         padding-right: 63px;
         align-items: center;
 
-        .facebook {
+        .socialLinks {
             transform: translateY(-10%);
         }
 
