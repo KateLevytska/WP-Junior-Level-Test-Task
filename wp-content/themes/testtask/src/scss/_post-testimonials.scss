@@ -21,7 +21,7 @@
         margin-top: 20px;
 
         &:hover {
-            color: #d78346;
+            color: $link_color_hover;
         }
     }
 }
@@ -40,7 +40,7 @@
         color: $primary_color_text;
 
         &:hover {
-            color: #d78346;
+            color: $link_color_hover;
         }
     }
 }

@@ -6,15 +6,8 @@
  * Text Domain: underscore
  * Version:    1.0
  */
-
-
-$primary_color_text: #201e51;
-$primary_color_text_second: #ffffff;
-$primary_bg_color: #201e51;
-$primary_bg_color_second: #2489bb;
-$header_height: 57px;
-$footer_height: 140px;
-
+ 
+@import "_vars";
 
 body {
     font-family: 'Roboto', sans-serif;

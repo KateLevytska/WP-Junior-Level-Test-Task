@@ -21,7 +21,7 @@
     &__link {
         display: block;
         color: rgb(51, 41, 41);
-        border: 2px solid #fff;
+        border: 2px solid $button_bg_color;
         padding: 12px 19px;
         text-decoration: none;
         border-radius: 5px;
@@ -29,7 +29,7 @@
         width: 206px;
 
         &:hover {
-            background-color: #fff;
+            background-color: $button_border_color;
             color: $primary_bg_color_second;
             border: 2px solid $primary_bg_color_second;
         }
