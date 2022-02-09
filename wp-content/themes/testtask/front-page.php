@@ -27,20 +27,22 @@ get_header(); ?>
 
 <aside class="form">
     <?php
-        echo do_shortcode(get_field('form'));
+    echo do_shortcode(get_field('form'));
     ?>
 </aside>
 
 <section class="sliderSection">
     <div class="sliderImages">
         <h2 class="sliderSection__title"><?php the_field('sliderSection_title') ?></h2>
-        <?php if (have_rows('image_slider')) : ?>
-            <div id="sliderImages">
-                <?php while (have_rows('image_slider')) : the_row(); ?>
-                    <div style="background-image: url('<?php the_sub_field("image") ?>')" class="sliderImages__item">
-                    </div>
-                <?php endwhile; ?>
-            </div>
+        <?php 
+    $images = get_field('image_slider');
+    if( $images ): ?>
+        <div id="sliderImages">
+            <?php foreach( $images as $image ): ?>
+                <div style="background-image: url('<?php echo esc_url($image['sizes']['medium']); ?>')" class="sliderImages__item">
+                </div>
+            <?php endforeach; ?>
+        </div>
         <?php endif; ?>
     </div>
 
