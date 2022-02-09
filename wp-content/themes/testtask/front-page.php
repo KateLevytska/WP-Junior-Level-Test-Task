@@ -86,50 +86,12 @@ get_header(); ?>
             </div>
         </div>
     <?php endif; ?>
-    
+
     <div class="sliderSection__bottom">
         <p class="sliderSection__text"><?php the_field('sliderSection_description') ?></p>
         <a href="#" class="sliderSection__link"><?php the_field('sliderSection_button') ?></a>
     </div>
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const todayPHP = "<?php the_field('countersection_date') ?>";
-        let deadline = new Date(todayPHP);
-
-        let counterId = null;
-
-        function declensionNum(num, words) {
-            return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
-        }
-
-        function countdowncounter() {
-            const diff = deadline - new Date();
-            if (diff <= 0) {
-                clearInterval(counterId);
-            }
-            const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
-            const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
-            const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
-            const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
-            $days.textContent = days < 10 ? '0' + days : days;
-            $hours.textContent = hours < 10 ? '0' + hours : hours;
-            $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-            $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-
-            if (parseInt((days + hours + minutes + seconds)) === 0) {
-                console.log(1)
-                document.querySelector('.counter').innerHTML = "Expired"
-            }
-        }
-        const $days = document.querySelector('.counter__days');
-        const $hours = document.querySelector('.counter__hours');
-        const $minutes = document.querySelector('.counter__minutes');
-        const $seconds = document.querySelector('.counter__seconds');
-        countdowncounter();
-        counterId = setInterval(countdowncounter, 1000);
-    });
-</script>
 <?php
 get_footer(); ?>

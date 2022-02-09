@@ -46,7 +46,6 @@ function testtask_setup()
 			)
 		)
 	);
-
 }
 
 add_action('init', 'register_post_types');
@@ -97,7 +96,6 @@ if (function_exists('acf_add_options_page')) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-
 }
 
 add_action('after_setup_theme', 'testtask_setup');
@@ -120,13 +118,23 @@ function testtask_scripts()
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('slick-script', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', 'jquery');
-	wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/scripts.min.js');
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
 }
 add_action('wp_enqueue_scripts', 'testtask_scripts');
+
+function js_enqueue_scripts()
+{
+	$frontpage_id = get_option('page_on_front');
+	$vars = get_field('countersection_date', $frontpage_id);
+
+	wp_register_script("custom-scripts", get_template_directory_uri() . '/scripts.min.js');
+	wp_enqueue_script("custom-scripts", array('jquery', 'slick-script'));
+	wp_localize_script("custom-scripts", "php_vars", $vars);
+}
+add_action("wp_enqueue_scripts", "js_enqueue_scripts");
 
 /**
  * Implement the Custom Header feature.
