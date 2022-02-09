@@ -2,8 +2,8 @@
 get_header(); ?>
 
 <section class="counterSection">
-    <div class="counter">     
-            <h2 class="counter__title"><?php the_field('countersection_title') ?></h2>      
+    <div class="counter">
+        <h2 class="counter__title"><?php the_field('countersection_title') ?></h2>
         <div class="counter__items">
             <div class="counter__block">
                 <p class="counter__item counter__days"></p>
@@ -23,11 +23,12 @@ get_header(); ?>
             </div>
         </div>
     </div>
-
 </section>
 
 <aside class="form">
-    <?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]') ?>
+    <?php
+        echo do_shortcode(get_field('form'));
+    ?>
 </aside>
 
 <section class="sliderSection">
