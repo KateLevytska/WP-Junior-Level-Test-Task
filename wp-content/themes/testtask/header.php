@@ -20,7 +20,7 @@
 			<?php } else { ?>
 				<div style="background-image: url('<?php the_field('header_banner-image') ?>')" class="header__banner"></div>
 				<div style="background-image: url('<?php the_field('header_banner-image2') ?>')" class="header__banner-overlay"></div>
-				<p class="header__phone"><?php the_field('header_phone') ?></p>
+				<a href="tel:<?php the_field('header_phone') ?>" class="header__phone"><?php the_field('header_phone') ?></a>
 				<div class="header__text">
 					<div style="background-image: url('<?php the_field('header_logo', 'option')?>')" class="header__logo"> 
 					</div>
