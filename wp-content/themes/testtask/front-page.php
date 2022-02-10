@@ -89,7 +89,8 @@ get_header(); ?>
 
     <div class="sliderSection__bottom">
         <p class="sliderSection__text"><?php the_field('sliderSection_description') ?></p>
-        <a href="#" class="sliderSection__link"><?php the_field('sliderSection_button') ?></a>
+        <?php $button = get_field('sliderSection_button')?>
+        <a href="<?php echo $button["url"] ?>" class="sliderSection__link"><?php echo $button['title'] ?></a>
     </div>
 </section>
 

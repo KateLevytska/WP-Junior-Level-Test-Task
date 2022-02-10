@@ -134,6 +134,7 @@ function js_enqueue_scripts()
 	wp_enqueue_script("custom-scripts", array('jquery', 'slick-script'));
 	wp_localize_script("custom-scripts", "php_vars", $vars);
 }
+
 add_action("wp_enqueue_scripts", "js_enqueue_scripts");
 
 /**
