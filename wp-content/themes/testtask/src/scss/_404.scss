@@ -1,0 +1,42 @@
+.errorSection {
+    font-size: 70px;
+    color: $primary_color_text;
+    display: flex;
+    justify-content: center;
+
+    &__block {
+        padding: 30px;
+        text-align: center;
+    }
+
+    &__item {
+        font-size: 30px;
+    }
+}
+
+.header__404 {
+    text-decoration: none;
+    color: $primary_color_text_second;
+    background-color: $primary_bg_color;
+    text-align: center;
+    width: 100%;
+    padding: 19px 27px;
+    display: block;
+}
+
+///media-querys///
+
+@media screen and (min-width: 991px) {
+
+    .errorSection {
+        font-size: 150px;
+
+        &__block {
+            padding: 100px;
+        }
+
+        &__item {
+            font-size: 60px;
+        }
+    }
+}

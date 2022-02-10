@@ -7,17 +7,7 @@
 	<?php the_title('<h1 class="post__title">', '</h1>');
 	else :
 		the_title('<h2 class="post__title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
-	endif;
-
-	if ('post' === get_post_type()) :
-	?>
-		<div class="entry-meta">
-			<?php
-			testtask_posted_on();
-			testtask_posted_by();
-			?>
-		</div>
-	<?php endif; ?>
+	endif;?>
 
 	<?php testtask_post_thumbnail(); ?>
 

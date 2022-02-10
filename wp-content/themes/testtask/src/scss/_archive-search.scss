@@ -1,0 +1,47 @@
+////search////////archive/////
+.sectionNotFound {
+    color: $primary_color_text;
+    text-align: center;
+    padding: 250px;
+
+    &__text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.search-field,
+.search-submit {
+    border: 1px solid $form_bg_color;
+    color: $primary_color_text;
+}
+
+
+.archive,
+.search {
+    text-align: center;
+
+    &__title {
+        margin-top: 50px;
+        color: $primary_color_text;
+
+    }
+
+    &__links {
+        color: $primary_color_text;
+        text-decoration: none;
+        display: block;
+        margin-top: 20px;
+
+        &:hover {
+            color: $link_color_hover;
+        }
+    }
+
+    &__content {
+        max-width: 550px;
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+}
